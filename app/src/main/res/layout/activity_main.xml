@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Fundo SVG com degradê (tela_de_log.xml) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tela_de_log"
+        android:scaleType="centerCrop"
+        android:contentDescription="fundo" />
+
+    <!-- Conteúdo sobreposto -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp">
+
+        <!-- Botão voltar -->
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF"
+            android:contentDescription="Voltar" />
+
+        <!-- Conteúdo central -->
+        <LinearLayout
+            android:id="@+id/centerContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true">
+
+            <!-- Ícone do usuário -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_user_circle"
+                app:tint="#FFFFFF"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Campo Usuário -->
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Usuário"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableTint="#FFFFFF"
+                android:padding="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Campo Senha -->
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_key"
+                android:drawableTint="#FFFFFF"
+                android:padding="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Link esqueceu a senha -->
+            <TextView
+                android:id="@+id/textForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esqueceu sua senha?"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Botão Entrar -->
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entrar"
+                android:textColor="#000000"
+                android:background="@drawable/button_background"
+                android:paddingVertical="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
