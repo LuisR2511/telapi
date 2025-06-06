@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <!-- Fundo SVG com degradê (tela_de_log.xml) -->
+    <!-- Fundo SVG com degradê -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,22 +16,24 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="32dp">
+        android:paddingHorizontal="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <!-- Botão voltar -->
         <ImageView
             android:id="@+id/buttonBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginStart="21dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:src="@drawable/ic_back_arrow"
             app:tint="#FFFFFF"
             android:contentDescription="Voltar" />
 
-        <!-- Conteúdo central -->
+        <!-- Conteúdo centralizado -->
         <LinearLayout
             android:id="@+id/centerContent"
             android:layout_width="match_parent"
@@ -40,63 +42,74 @@
             android:gravity="center_horizontal"
             android:layout_centerInParent="true">
 
-            <!-- Ícone do usuário -->
+            <!-- Avatar central -->
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
                 android:src="@drawable/ic_user_circle"
-                app:tint="#FFFFFF"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginBottom="32dp"
+                android:contentDescription="Avatar"
+                app:tint="#FFFFFF" />
 
             <!-- Campo Usuário -->
             <EditText
                 android:id="@+id/editUsername"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
                 android:hint="Usuário"
-                android:drawableStart="@drawable/ic_user"
-                android:drawableTint="#FFFFFF"
-                android:padding="12dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#CCCCCC"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableTint="#FFFFFF"
+                android:drawablePadding="12dp"
                 android:background="@drawable/edit_text_background"
-                android:layout_marginBottom="12dp" />
+                android:paddingStart="40dp"
+                android:paddingEnd="12dp"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/AnekKannada" />
 
             <!-- Campo Senha -->
             <EditText
                 android:id="@+id/editPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
                 android:hint="Senha"
                 android:inputType="textPassword"
-                android:drawableStart="@drawable/ic_key"
-                android:drawableTint="#FFFFFF"
-                android:padding="12dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#CCCCCC"
+                android:drawableStart="@drawable/ic_key"
+                android:drawableTint="#FFFFFF"
+                android:drawablePadding="12dp"
                 android:background="@drawable/edit_text_background"
-                android:layout_marginBottom="8dp" />
+                android:paddingStart="40dp"
+                android:paddingEnd="12dp"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/AnekKannada" />
 
             <!-- Link esqueceu a senha -->
             <TextView
                 android:id="@+id/textForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/AnekKannada"
                 android:text="Esqueceu sua senha?"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:layout_gravity="end"
-                android:layout_marginBottom="24dp" />
+                android:textSize="14sp" />
 
             <!-- Botão Entrar -->
             <Button
                 android:id="@+id/buttonLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
                 android:text="Entrar"
                 android:textColor="#000000"
                 android:background="@drawable/button_background"
-                android:paddingVertical="12dp" />
+                android:textSize="20sp"
+                android:fontFamily="@font/Inter" />
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>
