@@ -126,9 +126,8 @@
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:fontFamily="@font/inter"
-                android:backgroundTint="@android:color/transparent"
-                app:cornerRadius="14dp"
-                android:background="@drawable/button_background" />
+                app:backgroundTint="#FFFFFFFF"
+                app:cornerRadius="14dp" />
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>
